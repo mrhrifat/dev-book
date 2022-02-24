@@ -20,7 +20,7 @@ import {
   Button,
 } from "@mui/material";
 import React from "react";
-import user from "../images/user.jpeg";
+import user from "../img/me.jpeg";
 
 const StyledModal = styled(Modal)({
   display: "flex",
