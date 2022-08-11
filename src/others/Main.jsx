@@ -1,10 +1,10 @@
-import React from "react";
-import { ThemeProvider } from "@mui/system";
-import PracticeOne from "./PracticeOne";
-import PracticeTwo from "./PracticeTwo";
-import PracticeThree from "./PracticeThree";
-import PracticeFour from "./PracticeFour";
-import { theme } from "./theme";
+// import React from "react";
+// import { ThemeProvider } from "@mui/system";
+// import PracticeOne from "./PracticeOne";
+// import PracticeTwo from "./PracticeTwo";
+// import PracticeThree from "./PracticeThree";
+// import PracticeFour from "./PracticeFour";
+// import { theme } from "./theme";
 
 const Main = () => {
   return (
@@ -12,9 +12,9 @@ const Main = () => {
       {/* <PracticeOne /> */}
       {/* <PracticeTwo /> */}
       {/* <PracticeThree /> */}
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <PracticeFour />
-      </ThemeProvider>
+      </ThemeProvider> */}
     </>
   );
 };
