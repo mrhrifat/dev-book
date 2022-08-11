@@ -24,10 +24,19 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const UserBox = styled(Box)(({ theme }) => ({
+  display: "none",
+  gap: "15px",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  },
+}));
+
+const UserBox2 = styled(Box)(({ theme }) => ({
   display: "flex",
-  flexDirection: "row",
-  gap: "20px",
-  //   justifyContent: "space-evenly",
+  gap: "15px",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
+  },
 }));
 
 const Navbar = () => {
@@ -54,6 +63,14 @@ const Navbar = () => {
             sx={{ width: 25, height: 25 }}
           />
         </UserBox>
+        <UserBox2>
+          <Typography variant="span">Jhon Doe</Typography>
+          <Avatar
+            alt="Jhon Doe"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+            sx={{ width: 25, height: 25 }}
+          />
+        </UserBox2>
       </CustomToolbar>
     </AppBar>
   );
