@@ -7,7 +7,7 @@ import { Box, Container, CssBaseline, Stack } from "@mui/material";
 
 const Root = () => {
   return (
-    <>
+    <Box>
       <CssBaseline />
       <Navbar />
       <Container maxWidth="lg">
@@ -17,7 +17,7 @@ const Root = () => {
           <Rightbar />
         </Stack>
       </Container>
-    </>
+    </Box>
   );
 };
 
