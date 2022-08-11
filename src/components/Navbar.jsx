@@ -8,8 +8,11 @@ import {
   InputBase,
   Box,
   Avatar,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import { LogoDev, Mail, Notifications } from "@mui/icons-material";
+import { useState } from "react";
 
 const CustomToolbar = styled(Toolbar)({
   display: "flex",
@@ -40,6 +43,7 @@ const UserBox2 = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <AppBar position="sticky">
       <CustomToolbar>
@@ -61,9 +65,10 @@ const Navbar = () => {
             alt="Jhon Doe"
             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
             sx={{ width: 25, height: 25 }}
+            onClick={(e) => setOpen(true)}
           />
         </UserBox>
-        <UserBox2>
+        <UserBox2 onClick={(e) => setOpen(true)}>
           <Typography variant="span">Jhon Doe</Typography>
           <Avatar
             alt="Jhon Doe"
@@ -72,6 +77,19 @@ const Navbar = () => {
           />
         </UserBox2>
       </CustomToolbar>
+      <Menu
+        open={open}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        onClose={(e) => setOpen(false)}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>Settings</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
