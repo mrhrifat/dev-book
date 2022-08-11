@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { LogoDev, Mail, Notifications } from "@mui/icons-material";
 import { useState } from "react";
+import user from "../images/user.jpeg";
 
 const CustomToolbar = styled(Toolbar)({
   display: "flex",
@@ -63,18 +64,14 @@ const Navbar = () => {
           </Badge>
           <Avatar
             alt="Jhon Doe"
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+            src={user}
             sx={{ width: 25, height: 25 }}
             onClick={(e) => setOpen(true)}
           />
         </UserBox>
         <UserBox2 onClick={(e) => setOpen(true)}>
           <Typography variant="span">Jhon Doe</Typography>
-          <Avatar
-            alt="Jhon Doe"
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
-            sx={{ width: 25, height: 25 }}
-          />
+          <Avatar alt="Jhon Doe" src={user} sx={{ width: 25, height: 25 }} />
         </UserBox2>
       </CustomToolbar>
       <Menu
