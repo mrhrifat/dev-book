@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Button, styled } from "@mui/material";
+import { AddBox, AttachEmail } from "@mui/icons-material";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   margin: "10px",
@@ -19,11 +20,17 @@ const PracticeFour = () => {
         <Button variant="outlined" color="secondary">
           4
         </Button>
-        <CustomButton variant="outlined" color="secondary">
+        <CustomButton
+          endIcon={<AttachEmail />}
+          variant="outlined"
+          color="secondary"
+        >
           4
         </CustomButton>
 
-        <CustomButton variant="contained">5</CustomButton>
+        <CustomButton startIcon={<AddBox></AddBox>} variant="contained">
+          5
+        </CustomButton>
       </div>
     </Container>
   );
