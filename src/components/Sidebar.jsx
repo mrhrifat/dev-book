@@ -8,7 +8,16 @@ import {
   ListItemText,
   createTheme,
 } from "@mui/material";
-import { Home } from "@mui/icons-material";
+import {
+  Home,
+  Description,
+  People,
+  Storefront,
+  Person,
+  Settings,
+  AccountBox,
+  ModeNight,
+} from "@mui/icons-material";
 import { ThemeProvider } from "@mui/system";
 
 const theme = createTheme({
@@ -30,50 +39,50 @@ const Sidebar = () => {
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <Description />
               </ListItemIcon>
               <ListItemText primary="Pages" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <People />
               </ListItemIcon>
               <ListItemText primary="Groups" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <Storefront />
               </ListItemIcon>
               <ListItemText primary="Marketplace" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <Person />
               </ListItemIcon>
               <ListItemText primary="Friends" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <Settings />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home />
+                <AccountBox />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
