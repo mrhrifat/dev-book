@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Rightbar from "./components/Rightbar";
 import { Box, Container, CssBaseline, Stack } from "@mui/material";
+import AddPost from "./components/AddPost";
 
 const Root = () => {
   return (
@@ -17,6 +18,7 @@ const Root = () => {
           <Rightbar />
         </Stack>
       </Container>
+      <AddPost />
     </Box>
   );
 };
