@@ -41,7 +41,7 @@ const Posts = (props) => {
           <Checkbox
             label="add to favorites"
             icon={<FavoriteBorder />}
-            checkedIcon={<Favorite />}
+            checkedIcon={<Favorite sx={{ color: "red" }} />}
           />
         </IconButton>
         <IconButton aria-label="share">
