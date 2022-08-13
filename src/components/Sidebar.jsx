@@ -6,7 +6,6 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  createTheme,
   styled,
   Switch,
 } from "@mui/material";
@@ -20,13 +19,6 @@ import {
   AccountBox,
   ModeNight,
 } from "@mui/icons-material";
-import { ThemeProvider } from "@mui/system";
-
-const theme = createTheme({
-  item: {
-    padding: 0,
-  },
-});
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -78,82 +70,80 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const Sidebar = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        flex={1}
-        p={2}
-        sx={{ display: { xs: "none", md: "none", lg: "block" } }}
-      >
-        <Box position="fixed">
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <Home />
-                </ListItemIcon>
-                <ListItemText primary="Home" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <Description />
-                </ListItemIcon>
-                <ListItemText primary="Pages" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <People />
-                </ListItemIcon>
-                <ListItemText primary="Groups" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <Storefront />
-                </ListItemIcon>
-                <ListItemText primary="Marketplace" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <Person />
-                </ListItemIcon>
-                <ListItemText primary="Friends" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <Settings />
-                </ListItemIcon>
-                <ListItemText primary="Settings" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <AccountBox />
-                </ListItemIcon>
-                <ListItemText primary="Profile" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component="a" href="#">
-                <ListItemIcon>
-                  <ModeNight />
-                </ListItemIcon>
-                <MaterialUISwitch sx={{ m: 1 }} />
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Box>
+    <Box
+      flex={1}
+      p={2}
+      sx={{ display: { xs: "none", md: "none", lg: "block" } }}
+    >
+      <Box position="fixed">
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <Home />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <Description />
+              </ListItemIcon>
+              <ListItemText primary="Pages" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <People />
+              </ListItemIcon>
+              <ListItemText primary="Groups" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <Storefront />
+              </ListItemIcon>
+              <ListItemText primary="Marketplace" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <Person />
+              </ListItemIcon>
+              <ListItemText primary="Friends" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <Settings />
+              </ListItemIcon>
+              <ListItemText primary="Settings" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <AccountBox />
+              </ListItemIcon>
+              <ListItemText primary="Profile" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#">
+              <ListItemIcon>
+                <ModeNight />
+              </ListItemIcon>
+              <MaterialUISwitch sx={{ m: 1 }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
       </Box>
-    </ThemeProvider>
+    </Box>
   );
 };
 
