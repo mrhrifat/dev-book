@@ -68,7 +68,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box
       flex={1}
@@ -138,7 +138,10 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <MaterialUISwitch sx={{ m: 1 }} />
+              <MaterialUISwitch
+                sx={{ m: 1 }}
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
         </List>
